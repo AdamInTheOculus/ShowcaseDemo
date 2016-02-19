@@ -5,11 +5,6 @@ public class CubeRotate : MonoBehaviour {
 
     public float speed = 50.0f;
     private bool isRotating = false;
-
-	// Use this for initialization
-	void Start () {
-	    
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -21,9 +16,8 @@ public class CubeRotate : MonoBehaviour {
         if (DataManager.irData == 157)
             isRotating = false;
 
+		// Update cubes rotation
         if (isRotating)
-        {
             transform.Rotate(Vector3.up * speed * Time.deltaTime);
-        }
 	}
 }
